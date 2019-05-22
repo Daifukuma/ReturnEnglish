@@ -5,11 +5,13 @@ public class IntToEng {
 	public static void main(String[] args) {
 		
 		for(int n=0; n<5; n++) {
+		System.out.println("1000以下の数値を入力してください");
 		Scanner sc = new Scanner(System.in);	
 		int input = sc.nextInt();
 
 		System.out.println(translateEng(input));
 		}
+		System.out.println("終了します");
 	}
 
 	// 数値を英訳する変換するメソッド
@@ -90,7 +92,7 @@ public class IntToEng {
 		else if(n==800) return arr[8]+h;
 		else if(n==900) return arr[9]+h;
 		else if(n==1000) return "thousand";
-		
+		else if(n>1000) return "error,1000以下の数値を入力してください";
 		return arr[n];
 
 	}

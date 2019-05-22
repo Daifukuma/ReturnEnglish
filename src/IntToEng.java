@@ -4,11 +4,12 @@ public class IntToEng {
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		for(int n=0; n<5; n++) {
+		Scanner sc = new Scanner(System.in);	
 		int input = sc.nextInt();
 
 		System.out.println(translateEng(input));
-
+		}
 	}
 
 	// 数値を英訳する変換するメソッド
@@ -50,7 +51,7 @@ public class IntToEng {
 		if(n==20) {
 			return "twenty";
 		}else if(n>20 && n<30) {
-			return "twewnty-" + arr[n-20];
+			return "twenty-" + arr[n-20];
 		}else if(n==30) {
 			return "thirty";
 		}else if(n>30 && n<40) {
